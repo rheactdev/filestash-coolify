@@ -10,7 +10,7 @@ services:
     # Removed container_name to let Coolify manage instances properly
     environment:
       # :? forces Coolify to mark this as required in the UI
-      - APPLICATION_URL=https://${SERVICE_FQDN_APP:?}
+      - APPLICATION_URL=${SERVICE_FQDN_APP:?}
       - CANARY=true
       - OFFICE_URL=http://wopi_server:9980
       - OFFICE_FILESTASH_URL=http://app:8334
